@@ -1,0 +1,3 @@
+# Berilio
+
+Proyecto inicializado.
