@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Características - Berilio | Sistema Integrado de Gestión ISO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .features-hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--beige) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .features-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .features-hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-section {
+            padding: 4rem 2rem;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        
+        .feature-block:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .feature-block:nth-child(even) .feature-content {
+            direction: ltr;
+        }
+        
+        .feature-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .feature-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .feature-content p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: flex-start;
+            color: var(--text-secondary);
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-visual {
+            background: var(--beige);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+        
+        .feature-icon-large {
+            width: 200px;
+            height: 200px;
+            color: var(--primary-color);
+            opacity: 0.8;
+        }
+        
+        .cta-features {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin: 4rem auto;
+            max-width: 900px;
+        }
+        
+        .cta-features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-features p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .feature-block {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .feature-block:nth-child(even) {
+                direction: ltr;
+            }
+            
+            .features-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="berilio-logo.svg" alt="Berilio" class="logo">
+                    <span class="company-name">Berilio</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="features.html" class="nav-link">Características</a>
+                <a href="index.html#pricing" class="nav-link">Precios</a>
+                <a href="#contacto" class="nav-btn">Contactar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="features-hero">
+        <h1>Todo lo que necesitas para gestionar tus normas ISO</h1>
+        <p>Berilio integra las funcionalidades esenciales para mantener tu certificación al día, sin complicaciones.</p>
+    </section>
+
+    <!-- Features Sections -->
+    <section class="features-section">
+        <div class="features-container">
+            
+            <!-- Feature 1: Gestión Unificada -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3>🎯 Gestión Unificada</h3>
+                    <h2>Un solo sistema para todas tus normas</h2>
+                    <p>Olvídate de manejar múltiples plataformas o carpetas. Berilio centraliza la gestión de todas tus certificaciones ISO en un único lugar.</p>
+                    <ul class="feature-list">
+                        <li>Dashboard único para ISO 9001, 14001, 45001 y Decreto 1072</li>
+                        <li>Vista 360° del estado de cumplimiento en tiempo real</li>
+                        <li>Reportes consolidados para todas las normas</li>
+                        <li>Un solo lugar para eventos, no conformidades e incidentes</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <svg class="feature-icon-large" viewBox="0 0 200 200" fill="none">
+                        <rect x="20" y="20" width="160" height="160" rx="10" stroke="currentColor" stroke-width="3"/>
+                        <rect x="40" y="40" width="50" height="50" rx="5" fill="currentColor" opacity="0.2"/>
+                        <rect x="110" y="40" width="50" height="50" rx="5" fill="currentColor" opacity="0.2"/>
+                        <rect x="40" y="110" width="50" height="50" rx="5" fill="currentColor" opacity="0.2"/>
+                        <rect x="110" y="110" width="50" height="50" rx="5" fill="currentColor" opacity="0.2"/>
+                        <circle cx="100" cy="100" r="30" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Feature 2: Motor de Eventos -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3>📋 Motor Inteligente de Eventos</h3>
+                    <h2>Gestiona cualquier tipo de evento con un solo formulario</h2>
+                    <p>Nuestro motor se adapta automáticamente al tipo de evento que necesitas reportar, sea una no conformidad, un incidente ambiental o un accidente laboral.</p>
+                    <ul class="feature-list">
+                        <li>Formulario universal que se adapta según el tipo de evento</li>
+                        <li>Asignación automática de responsables</li>
+                        <li>Flujo configurable: Reportado → Análisis → Acciones → Cerrado</li>
+                        <li>Trazabilidad completa con evidencias y fotografías</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <svg class="feature-icon-large" viewBox="0 0 200 200" fill="none">
+                        <path d="M40 60 L160 60" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="40" cy="60" r="8" fill="currentColor"/>
+                        <path d="M160 60 L160 100" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="160" cy="100" r="8" fill="currentColor"/>
+                        <path d="M160 100 L100 100" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="100" cy="100" r="8" fill="currentColor"/>
+                        <path d="M100 100 L100 140" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="100" cy="140" r="8" fill="currentColor"/>
+                        <path d="M100 140 L160 140" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="160" cy="140" r="12" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Feature 3: Gestor Documental -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3>📚 Gestor Documental Integrado</h3>
+                    <h2>Tus documentos siempre actualizados y disponibles</h2>
+                    <p>Control total sobre tu documentación ISO. Versiones, aprobaciones y alertas automáticas para que nunca trabajes con documentos obsoletos.</p>
+                    <ul class="feature-list">
+                        <li>Control de versiones automático</li>
+                        <li>Flujos de aprobación configurables</li>
+                        <li>Alertas de revisión antes del vencimiento</li>
+                        <li>Plantillas pre-aprobadas para cada norma</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <svg class="feature-icon-large" viewBox="0 0 200 200" fill="none">
+                        <rect x="50" y="30" width="100" height="140" rx="5" stroke="currentColor" stroke-width="3"/>
+                        <rect x="60" y="50" width="80" height="3" fill="currentColor" opacity="0.5"/>
+                        <rect x="60" y="65" width="60" height="3" fill="currentColor" opacity="0.5"/>
+                        <rect x="60" y="80" width="70" height="3" fill="currentColor" opacity="0.5"/>
+                        <rect x="60" y="95" width="50" height="3" fill="currentColor" opacity="0.5"/>
+                        <rect x="60" y="110" width="80" height="3" fill="currentColor" opacity="0.5"/>
+                        <rect x="60" y="125" width="40" height="3" fill="currentColor" opacity="0.5"/>
+                        <circle cx="130" cy="150" r="20" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M120 150 L127 157 L140 144" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Feature 4: Matriz Legal -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3>⚖️ Matriz de Requisitos Legales</h3>
+                    <h2>Nunca pierdas una fecha límite importante</h2>
+                    <p>Sistema inteligente que rastrea todos tus requisitos legales y te alerta antes de que algo venza.</p>
+                    <ul class="feature-list">
+                        <li>Control de permisos ambientales y certificaciones</li>
+                        <li>Alertas automáticas 30 días antes del vencimiento</li>
+                        <li>Seguimiento de reportes obligatorios a autoridades</li>
+                        <li>Estado visual: Vigente / Por vencer / Vencido</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <svg class="feature-icon-large" viewBox="0 0 200 200" fill="none">
+                        <rect x="30" y="40" width="140" height="120" rx="5" stroke="currentColor" stroke-width="3"/>
+                        <rect x="45" y="60" width="110" height="15" fill="green" opacity="0.3"/>
+                        <rect x="45" y="85" width="110" height="15" fill="green" opacity="0.3"/>
+                        <rect x="45" y="110" width="110" height="15" fill="orange" opacity="0.3"/>
+                        <rect x="45" y="135" width="110" height="15" fill="red" opacity="0.3"/>
+                        <circle cx="160" cy="67" r="5" fill="green"/>
+                        <circle cx="160" cy="92" r="5" fill="green"/>
+                        <circle cx="160" cy="117" r="5" fill="orange"/>
+                        <circle cx="160" cy="142" r="5" fill="red"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Feature 5: Auditorías -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3>🔍 Sistema de Auditorías</h3>
+                    <h2>Auditorías organizadas de principio a fin</h2>
+                    <p>Gestiona todo el ciclo de auditoría en un solo lugar. Desde la planificación hasta el cierre de hallazgos.</p>
+                    <ul class="feature-list">
+                        <li>Planificación, ejecución y cierre en un solo flujo</li>
+                        <li>Listas de verificación configurables por norma</li>
+                        <li>Gestión de hallazgos y planes de acción</li>
+                        <li>Seguimiento automático hasta el cierre</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <svg class="feature-icon-large" viewBox="0 0 200 200" fill="none">
+                        <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-width="3" fill="none"/>
+                        <circle cx="100" cy="100" r="50" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+                        <circle cx="100" cy="100" r="30" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+                        <path d="M100 100 L100 50" stroke="currentColor" stroke-width="3"/>
+                        <path d="M100 100 L130 130" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="100" cy="100" r="8" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Feature 6: Analytics -->
+            <div class="feature-block">
+                <div class="feature-content">
+                    <h3>📊 Analytics y Reportes</h3>
+                    <h2>Decisiones basadas en datos reales</h2>
+                    <p>Visualiza el desempeño de tu sistema de gestión con métricas claras y reportes automáticos.</p>
+                    <ul class="feature-list">
+                        <li>Indicadores clave por norma en tiempo real</li>
+                        <li>Tendencias de eventos y no conformidades</li>
+                        <li>Reportes ejecutivos automáticos</li>
+                        <li>Exportación a PDF y Excel</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <svg class="feature-icon-large" viewBox="0 0 200 200" fill="none">
+                        <rect x="30" y="140" width="20" height="40" fill="currentColor" opacity="0.3"/>
+                        <rect x="60" y="120" width="20" height="60" fill="currentColor" opacity="0.4"/>
+                        <rect x="90" y="100" width="20" height="80" fill="currentColor" opacity="0.5"/>
+                        <rect x="120" y="80" width="20" height="100" fill="currentColor" opacity="0.6"/>
+                        <rect x="150" y="60" width="20" height="120" fill="currentColor" opacity="0.7"/>
+                        <path d="M30 140 Q90 60 170 100" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="features-section">
+        <div class="cta-features">
+            <h2>¿Listo para simplificar tu gestión ISO?</h2>
+            <p>Únete a las empresas que ya confían en Berilio para mantener sus certificaciones al día.</p>
+            <a href="index.html#pricing"><button class="btn-white">Ver planes y precios</button></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="berilio-logo.svg" alt="Berilio" class="footer-logo">
+                <p class="footer-tagline">Software de gestión ISO para empresas que van en serio.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="features.html">Características</a></li>
+                        <li><a href="index.html#pricing">Precios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Berilio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

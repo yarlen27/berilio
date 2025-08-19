@@ -12,8 +12,9 @@
 ### Servicios Operativos
 - **Alegra (Facturación)**: ~60.000 COP
 - **Contadora**: 400.000 COP
+- **Capacitación ISO mensual (2 horas virtual)**: 400.000 COP
 
-### **TOTAL COSTOS FIJOS**: ~1.452.000 COP/mes
+### **TOTAL COSTOS FIJOS**: ~1.852.000 COP/mes
 
 ## Objetivo de Ingresos
 - **Ingreso mínimo requerido**: 10.000.000 COP/mes
@@ -22,10 +23,10 @@
 
 ## Análisis de Viabilidad
 
-Con costos fijos de 1.452.000 COP y margen del 80%, necesitas:
-- **Ingresos mínimos para cubrir costos**: 7.260.000 COP/mes
+Con costos fijos de 1.852.000 COP y margen del 80%, necesitas:
+- **Ingresos mínimos para cubrir costos**: 9.260.000 COP/mes
 - **Ingresos objetivo**: 10.000.000 COP/mes
-- **Utilidad neta objetivo**: 8.548.000 COP/mes
+- **Utilidad neta objetivo**: 8.148.000 COP/mes
 
 ## Estructura de Precios Propuesta - MODELO POR USUARIOS
 
@@ -36,6 +37,7 @@ Con costos fijos de 1.452.000 COP y margen del 80%, necesitas:
   - 20 usuarios
   - 250 GB almacenamiento
   - Todas las normas ISO
+  - Capacitación ISO mensual (2 horas, hasta 10 usuarios)
 
 ### Plan 2: Profesional (50 usuarios)
 - **Precio mensual**: 1.340.000 COP
@@ -44,6 +46,7 @@ Con costos fijos de 1.452.000 COP y margen del 80%, necesitas:
   - 50 usuarios
   - 500 GB almacenamiento
   - Todas las normas ISO
+  - Capacitación ISO mensual (2 horas, hasta 10 usuarios)
 
 ### Plan 3: Empresarial (100 usuarios)
 - **Precio mensual**: 2.340.000 COP
@@ -52,6 +55,7 @@ Con costos fijos de 1.452.000 COP y margen del 80%, necesitas:
   - 100 usuarios
   - 1 TB almacenamiento
   - Todas las normas ISO
+  - Capacitación ISO mensual (2 horas, hasta 10 usuarios)
 
 ### Adicionales
 - **Usuario adicional**: 50.000 COP/mes (mínimo paquete de 10 usuarios)
@@ -69,18 +73,18 @@ Con costos fijos de 1.452.000 COP y margen del 80%, necesitas:
 
 ### Escenario Pesimista (3 clientes)
 - 3 Starter = 1.920.000 COP/mes
-- **Utilidad**: 468.000 COP/mes
-- **Margen real**: 24%
+- **Utilidad**: 68.000 COP/mes
+- **Margen real**: 4%
 
 ### Escenario Realista (7 clientes)
 - 3 Starter + 3 Profesional + 1 Empresarial = 6.380.000 COP/mes
-- **Utilidad**: 4.928.000 COP/mes
-- **Margen real**: 77%
+- **Utilidad**: 4.528.000 COP/mes
+- **Margen real**: 71%
 
 ### Escenario Optimista (10 clientes)
 - 4 Starter + 4 Profesional + 2 Empresarial = 10.280.000 COP/mes
-- **Utilidad**: 8.828.000 COP/mes
-- **Margen real**: 86%
+- **Utilidad**: 8.428.000 COP/mes
+- **Margen real**: 82%
 
 ## Punto de Equilibrio
 - **Necesitas mínimo**: 3 clientes Starter (1.920.000 COP)
@@ -97,10 +101,18 @@ Con costos fijos de 1.452.000 COP y margen del 80%, necesitas:
 ## Recomendaciones
 
 1. **Transparencia como ventaja**: Ser el único con precios claros por usuario
-2. **Plan Micro agresivo**: 350.000 COP captura micro empresas que ISOwin no atiende bien
+2. **Capacitación gratuita**: Diferenciador clave vs competencia, fideliza clientes
 3. **Todas las normas incluidas**: Ventaja vs ISOwin que cobra por norma
 4. **Descuento anual del 17%**: 10 meses al precio de 12 mejora flujo de caja
 5. **Modelo escalable**: Precio por usuario permite crecimiento predecible
+
+## Valor Agregado - Capacitación Mensual ISO
+- **Formato**: Webinar virtual de 2 horas
+- **Frecuencia**: Mensual (12 sesiones al año)
+- **Temas rotativos**: ISO 9001, 14001, 45001, 27001
+- **Costo para Berilio**: 400.000 COP/mes
+- **Valor percibido por cliente**: 500.000-800.000 COP
+- **ROI**: Mayor retención, diferenciación, upselling
 
 ## Análisis de Mercado Colombiano
 
