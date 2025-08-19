@@ -1,15 +1,17 @@
 :root {
-    /* Anthropic-inspired color palette */
-    --beige: #F5F2E8;
-    --beige-dark: #E8E2D4;
-    --mint: #D4E8E0;
-    --mint-dark: #B8D5C7;
-    --lavender: #DFD9E8;
-    --lavender-dark: #C9C0D4;
+    /* Blue color palette based on logo */
+    --beige: #E3F2FD;  /* Light blue instead of beige */
+    --beige-dark: #BBDEFB;
+    --mint: #E1F5FE;  /* Very light blue instead of mint */
+    --mint-dark: #B3E5FC;
+    --lavender: #E8EAF6;  /* Light indigo instead of lavender */
+    --lavender-dark: #C5CAE9;
     
-    /* Brand colors */
-    --primary-color: #722F37;
-    --primary-dark: #5a242a;
+    /* Brand colors from logo.svg */
+    --primary-color: #2196F3;
+    --primary-dark: #1565C0;
+    --primary-darker: #10519D;
+    --accent-blue: #1878C6;
     
     /* Neutral colors */
     --text-primary: #2D2D2D;
@@ -410,7 +412,7 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--text-primary);
+    background: var(--primary-darker);
     color: white;
     padding: 3rem 2rem 1rem;
 }
