@@ -56,9 +56,8 @@ body {
 }
 
 .nav-container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1rem 2rem;
+    width: 100%;
+    padding: 1rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,15 +69,61 @@ body {
     gap: 0.75rem;
 }
 
-.logo {
-    width: 36px;
-    height: 36px;
+/* New logo styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-system);
 }
 
-.company-name {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
+.logo-symbol {
+    position: relative;
+    background: var(--primary-dark);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 65px;
+    height: 55px;
+    transition: var(--transition);
+}
+
+.be-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.atomic-number {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.logo-suffix {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: var(--transition);
+    margin-left: -2px;
+}
+
+/* Hide suffix when scrolled */
+.navbar.scrolled .logo-suffix {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar.scrolled .logo-symbol {
+    background: var(--primary-color);
 }
 
 .nav-menu {
@@ -420,8 +465,8 @@ body {
 }
 
 .footer-container {
-    max-width: var(--max-width);
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 3rem;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 3rem;
@@ -467,9 +512,8 @@ body {
 }
 
 .footer-bottom {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding-top: 2rem;
+    width: 100%;
+    padding: 2rem 3rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
 }
@@ -487,6 +531,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+    
     .nav-menu {
         display: none;
     }

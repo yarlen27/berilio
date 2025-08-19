@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (currentScroll > 100) {
             navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+            navbar.classList.add('scrolled');
         } else {
             navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
         
         lastScroll = currentScroll;
