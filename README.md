@@ -1,8 +1,8 @@
-# Cobalto SIG - Sistema Integrado de Gestión Multi-tenant
+# Berilio - Sistema Integrado de Gestión Multi-tenant
 
 ## Descripción del Proyecto
 
-Cobalto SIG es un proyecto para desarrollar un Sistema Integrado de Gestión (SIG) multi-tenant que integre múltiples normas ISO como:
+Berilio es un proyecto para desarrollar un Sistema Integrado de Gestión (SIG) multi-tenant que integre múltiples normas ISO como:
 
 - **ISO 9001** - Gestión de Calidad
 - **ISO 14001** - Gestión Ambiental  
