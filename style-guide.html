@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Estilo - Berilio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .style-guide {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 2rem 4rem;
+        }
+        
+        .guide-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+        
+        .guide-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        
+        .guide-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+        
+        .section {
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        /* Color Palette Section */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .color-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .color-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        
+        .color-sample {
+            height: 120px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .color-info {
+            padding: 1rem;
+            background: white;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .color-value {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .color-usage {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+        
+        /* Typography Section */
+        .type-specimen {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-light);
+        }
+        
+        .type-sample {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .type-sample:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .type-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .type-specs {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Components Section */
+        .component-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .component-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+        
+        .component-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .component-example {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--background);
+            border-radius: 8px;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .component-code {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-x: auto;
+        }
+        
+        /* Spacing Section */
+        .spacing-grid {
+            display: grid;
+            gap: 1rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+        
+        .spacing-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .spacing-visual {
+            background: var(--primary-color);
+            height: 40px;
+            border-radius: 4px;
+        }
+        
+        .spacing-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            min-width: 100px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Grid Examples */
+        .grid-example {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            margin-bottom: 2rem;
+        }
+        
+        .grid-demo {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .grid-demo-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .grid-demo-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .grid-item {
+            background: var(--beige);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Logo Section */
+        .logo-variants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .logo-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+        
+        .logo-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .logo-display {
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-display.light {
+            background: white;
+            border: 1px solid var(--border-light);
+        }
+        
+        .logo-display.dark {
+            background: var(--primary-darker);
+        }
+        
+        .logo-specs {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: left;
+        }
+        
+        /* Icons Section */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+        
+        .icon-item {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--background);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-item:hover {
+            background: var(--beige);
+            transform: scale(1.05);
+        }
+        
+        .icon-item svg {
+            width: 48px;
+            height: 48px;
+            color: var(--text-primary);
+        }
+        
+        /* Copy button */
+        .copy-btn {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <img src="berilio-logo.svg" alt="Be" class="logo-symbol">
+                    <span class="logo-suffix">rilio</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="features.html" class="nav-link">Características</a>
+                <a href="style-guide.html" class="nav-link" style="color: var(--primary-color);">Manual de Estilo</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="style-guide">
+        <!-- Header -->
+        <div class="guide-header">
+            <h1 class="guide-title">Manual de Estilo</h1>
+            <p class="guide-subtitle">Guía de diseño y componentes para Berilio</p>
+        </div>
+
+        <!-- Logo Section -->
+        <section class="section">
+            <h2 class="section-title">1. Identidad de Marca</h2>
+            
+            <div class="logo-variants">
+                <div class="logo-card">
+                    <div class="logo-card-title">Logo Principal</div>
+                    <div class="logo-display light">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 0;">
+                            <img src="berilio-logo.svg" alt="Be" style="width: 60px; height: 60px;">
+                            <span style="font-size: 2rem; font-weight: 500;">rilio</span>
+                        </div>
+                    </div>
+                    <div class="logo-specs">
+                        <strong>Uso:</strong> Aplicación principal<br>
+                        <strong>Tamaño mínimo:</strong> 45px altura<br>
+                        <strong>Espacio libre:</strong> 50% del alto
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-card-title">Isotipo</div>
+                    <div class="logo-display light">
+                        <img src="berilio-logo.svg" alt="Be" style="width: 80px; height: 80px;">
+                    </div>
+                    <div class="logo-specs">
+                        <strong>Uso:</strong> Favicon, avatar<br>
+                        <strong>Elemento:</strong> Be (Berilio)<br>
+                        <strong>Color:</strong> #1565C0
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <div class="logo-card-title">Versión Oscura</div>
+                    <div class="logo-display dark">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 0;">
+                            <img src="berilio-logo.svg" alt="Be" style="width: 60px; height: 60px; filter: brightness(1.2);">
+                            <span style="font-size: 2rem; font-weight: 500; color: white;">rilio</span>
+                        </div>
+                    </div>
+                    <div class="logo-specs">
+                        <strong>Uso:</strong> Fondos oscuros<br>
+                        <strong>Contraste mínimo:</strong> 4.5:1<br>
+                        <strong>Ajuste:</strong> +20% brillo
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="section">
+            <h2 class="section-title">2. Paleta de Colores</h2>
+            
+            <h3 style="margin-bottom: 1.5rem; color: var(--text-secondary);">Colores Principales</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: #2196F3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Blue</div>
+                        <div class="color-value">#2196F3</div>
+                        <div class="color-usage">Acciones principales, links</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #1565C0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Dark</div>
+                        <div class="color-value">#1565C0</div>
+                        <div class="color-usage">Estados hover, énfasis</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #10519D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Darker</div>
+                        <div class="color-value">#10519D</div>
+                        <div class="color-usage">Footer, fondos oscuros</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #1878C6;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Accent Blue</div>
+                        <div class="color-value">#1878C6</div>
+                        <div class="color-usage">Acentos, badges</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 1.5rem; color: var(--text-secondary);">Colores de Fondo</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: #E3F2FD; border: 1px solid #ddd;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Blue Light (Beige)</div>
+                        <div class="color-value">#E3F2FD</div>
+                        <div class="color-usage">Fondos de tarjetas</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #E1F5FE; border: 1px solid #ddd;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Cyan Light (Mint)</div>
+                        <div class="color-value">#E1F5FE</div>
+                        <div class="color-usage">Secciones alternativas</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #E8EAF6; border: 1px solid #ddd;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Indigo Light (Lavender)</div>
+                        <div class="color-value">#E8EAF6</div>
+                        <div class="color-usage">Destacados, CTA</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #FEFEFE; border: 1px solid #ddd;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Background</div>
+                        <div class="color-value">#FEFEFE</div>
+                        <div class="color-usage">Fondo principal</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom: 1.5rem; color: var(--text-secondary);">Colores de Texto</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: #2D2D2D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Primary</div>
+                        <div class="color-value">#2D2D2D</div>
+                        <div class="color-usage">Títulos, texto principal</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #666666;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Secondary</div>
+                        <div class="color-value">#666666</div>
+                        <div class="color-usage">Descripciones, subtítulos</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #999999;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Light</div>
+                        <div class="color-value">#999999</div>
+                        <div class="color-usage">Placeholders, notas</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-sample" style="background: #F0F0F0; border: 1px solid #ddd;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Border Light</div>
+                        <div class="color-value">#F0F0F0</div>
+                        <div class="color-usage">Bordes, divisores</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="section">
+            <h2 class="section-title">3. Tipografía</h2>
+            
+            <div class="type-specimen">
+                <div class="type-sample">
+                    <div class="type-label">Font Stack Principal</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.2rem;">
+                        JetBrains Mono - La fuente técnica que transmite precisión
+                    </div>
+                    <div class="type-specs">
+                        font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Source Code Pro', 'Consolas', monospace;
+                    </div>
+                </div>
+                
+                <div class="type-sample">
+                    <div class="type-label">H1 - Hero Title</div>
+                    <h1 style="font-size: 2.8rem; font-weight: 700; line-height: 1.3;">
+                        Un solo sistema para todas tus certificaciones ISO
+                    </h1>
+                    <div class="type-specs">
+                        font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.3;
+                    </div>
+                </div>
+                
+                <div class="type-sample">
+                    <div class="type-label">H2 - Section Title</div>
+                    <h2 style="font-size: 2rem; font-weight: 600;">
+                        Características principales
+                    </h2>
+                    <div class="type-specs">
+                        font-size: 2rem; font-weight: 600;
+                    </div>
+                </div>
+                
+                <div class="type-sample">
+                    <div class="type-label">H3 - Card Title</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600;">
+                        Ahorra 70% del tiempo en auditorías
+                    </h3>
+                    <div class="type-specs">
+                        font-size: 1.25rem; font-weight: 600;
+                    </div>
+                </div>
+                
+                <div class="type-sample">
+                    <div class="type-label">Body Text</div>
+                    <p style="font-size: 1rem; line-height: 1.6;">
+                        Berilio es el software de gestión ISO diseñado para empresas que necesitan mantener múltiples certificaciones sin duplicar esfuerzos. Integramos ISO 9001, 14001, 45001 y 27001 en un solo sistema inteligente.
+                    </p>
+                    <div class="type-specs">
+                        font-size: 1rem; line-height: 1.6;
+                    </div>
+                </div>
+                
+                <div class="type-sample">
+                    <div class="type-label">Small Text</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        © 2025 Berilio. Todos los derechos reservados.
+                    </p>
+                    <div class="type-specs">
+                        font-size: 0.9rem; color: var(--text-secondary);
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components -->
+        <section class="section">
+            <h2 class="section-title">4. Componentes UI</h2>
+            
+            <div class="component-grid">
+                <!-- Buttons -->
+                <div class="component-card">
+                    <h3 class="component-title">Botones</h3>
+                    <div class="component-example">
+                        <button class="btn-primary">Botón Primario</button>
+                        <button class="btn-secondary">Botón Secundario</button>
+                        <button class="btn-outline">Botón Outline</button>
+                        <a href="#" class="nav-btn">Nav Button</a>
+                    </div>
+                    <div class="component-code">
+&lt;button class="btn-primary"&gt;Botón Primario&lt;/button&gt;
+&lt;button class="btn-secondary"&gt;Botón Secundario&lt;/button&gt;
+&lt;button class="btn-outline"&gt;Botón Outline&lt;/button&gt;</div>
+                </div>
+                
+                <!-- Cards -->
+                <div class="component-card">
+                    <h3 class="component-title">Tarjetas de Características</h3>
+                    <div class="component-example" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                        <div class="feature-card beige" style="padding: 1.5rem;">
+                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Tarjeta Azul Claro</h4>
+                            <p style="font-size: 0.85rem;">Contenido de ejemplo para mostrar el estilo de la tarjeta.</p>
+                        </div>
+                        <div class="feature-card mint" style="padding: 1.5rem;">
+                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Tarjeta Cyan</h4>
+                            <p style="font-size: 0.85rem;">Contenido de ejemplo para mostrar el estilo de la tarjeta.</p>
+                        </div>
+                        <div class="feature-card lavender" style="padding: 1.5rem;">
+                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Tarjeta Índigo</h4>
+                            <p style="font-size: 0.85rem;">Contenido de ejemplo para mostrar el estilo de la tarjeta.</p>
+                        </div>
+                    </div>
+                    <div class="component-code">
+&lt;div class="feature-card beige"&gt;
+    &lt;h3&gt;Título&lt;/h3&gt;
+    &lt;p&gt;Descripción&lt;/p&gt;
+&lt;/div&gt;</div>
+                </div>
+                
+                <!-- Forms -->
+                <div class="component-card">
+                    <h3 class="component-title">Elementos de Formulario</h3>
+                    <div class="component-example" style="display: block;">
+                        <div style="margin-bottom: 1rem;">
+                            <input type="text" placeholder="Nombre de empresa" style="
+                                padding: 0.75rem 1rem;
+                                border: 1px solid var(--border-light);
+                                border-radius: 8px;
+                                font-family: var(--font-system);
+                                font-size: 1rem;
+                                width: 100%;
+                                max-width: 300px;
+                            ">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <select style="
+                                padding: 0.75rem 1rem;
+                                border: 1px solid var(--border-light);
+                                border-radius: 8px;
+                                font-family: var(--font-system);
+                                font-size: 1rem;
+                                width: 100%;
+                                max-width: 300px;
+                                background: white;
+                            ">
+                                <option>Seleccionar plan</option>
+                                <option>Starter</option>
+                                <option>Profesional</option>
+                                <option>Empresarial</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px;">
+                                <span style="font-size: 0.95rem;">Acepto los términos y condiciones</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacing -->
+        <section class="section">
+            <h2 class="section-title">5. Sistema de Espaciado</h2>
+            
+            <div class="spacing-grid">
+                <div class="spacing-item">
+                    <span class="spacing-label">0.25rem (4px)</span>
+                    <div class="spacing-visual" style="width: 4px;"></div>
+                </div>
+                <div class="spacing-item">
+                    <span class="spacing-label">0.5rem (8px)</span>
+                    <div class="spacing-visual" style="width: 8px;"></div>
+                </div>
+                <div class="spacing-item">
+                    <span class="spacing-label">1rem (16px)</span>
+                    <div class="spacing-visual" style="width: 16px;"></div>
+                </div>
+                <div class="spacing-item">
+                    <span class="spacing-label">1.5rem (24px)</span>
+                    <div class="spacing-visual" style="width: 24px;"></div>
+                </div>
+                <div class="spacing-item">
+                    <span class="spacing-label">2rem (32px)</span>
+                    <div class="spacing-visual" style="width: 32px;"></div>
+                </div>
+                <div class="spacing-item">
+                    <span class="spacing-label">3rem (48px)</span>
+                    <div class="spacing-visual" style="width: 48px;"></div>
+                </div>
+                <div class="spacing-item">
+                    <span class="spacing-label">4rem (64px)</span>
+                    <div class="spacing-visual" style="width: 64px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid System -->
+        <section class="section">
+            <h2 class="section-title">6. Sistema de Grid</h2>
+            
+            <div class="grid-example">
+                <h3 class="component-title">Grid de 3 Columnas</h3>
+                <div class="grid-demo grid-demo-3">
+                    <div class="grid-item">Columna 1</div>
+                    <div class="grid-item">Columna 2</div>
+                    <div class="grid-item">Columna 3</div>
+                </div>
+            </div>
+            
+            <div class="grid-example">
+                <h3 class="component-title">Grid de 2 Columnas</h3>
+                <div class="grid-demo grid-demo-2">
+                    <div class="grid-item">Columna 1</div>
+                    <div class="grid-item">Columna 2</div>
+                </div>
+            </div>
+            
+            <div class="grid-example">
+                <h3 class="component-title">Grid Responsive</h3>
+                <div class="grid-demo" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="grid-item">Auto 1</div>
+                    <div class="grid-item">Auto 2</div>
+                    <div class="grid-item">Auto 3</div>
+                    <div class="grid-item">Auto 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Icons -->
+        <section class="section">
+            <h2 class="section-title">7. Iconografía</h2>
+            
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="16 12 12 8 12 16"/>
+                    </svg>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M9 9h6v6h-6z"/>
+                    </svg>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="15" y1="9" x2="9" y2="15"/>
+                        <line x1="9" y1="9" x2="15" y2="15"/>
+                    </svg>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                    </svg>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Guidelines -->
+        <section class="section">
+            <h2 class="section-title">8. Guías de Uso</h2>
+            
+            <div class="component-card">
+                <h3 class="component-title">Principios de Diseño</h3>
+                <ul style="line-height: 2; color: var(--text-secondary);">
+                    <li><strong>Claridad:</strong> Interfaces limpias y sin distracciones</li>
+                    <li><strong>Consistencia:</strong> Uso uniforme de colores, espaciado y tipografía</li>
+                    <li><strong>Técnico pero accesible:</strong> Lenguaje preciso sin ser intimidante</li>
+                    <li><strong>Enfoque en datos:</strong> Presentación clara de información compleja</li>
+                    <li><strong>Responsive:</strong> Diseño adaptable a todos los dispositivos</li>
+                </ul>
+            </div>
+            
+            <div class="component-card">
+                <h3 class="component-title">Tono de Comunicación</h3>
+                <ul style="line-height: 2; color: var(--text-secondary);">
+                    <li><strong>Profesional:</strong> Serio pero no corporativo</li>
+                    <li><strong>Directo:</strong> Sin marketing fluff, solo valor real</li>
+                    <li><strong>Técnico:</strong> Usar terminología ISO correcta</li>
+                    <li><strong>Confiable:</strong> Transmitir seguridad y experticia</li>
+                    <li><strong>Español neutro:</strong> Evitar regionalismos</li>
+                </ul>
+            </div>
+            
+            <div class="component-card">
+                <h3 class="component-title">Mejores Prácticas</h3>
+                <ul style="line-height: 2; color: var(--text-secondary);">
+                    <li>Usar <strong>JetBrains Mono</strong> para todo el texto</li>
+                    <li>Mantener contraste mínimo de <strong>4.5:1</strong> para accesibilidad</li>
+                    <li>Border radius consistente de <strong>12px</strong> para tarjetas, <strong>8px</strong> para botones</li>
+                    <li>Transiciones suaves de <strong>0.3s ease</strong></li>
+                    <li>Padding de sección estándar de <strong>4rem 2rem</strong></li>
+                    <li>Máximo ancho de contenido de <strong>1200px</strong></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add copy functionality to color values
+        document.querySelectorAll('.color-value').forEach(el => {
+            el.style.cursor = 'pointer';
+            el.title = 'Click para copiar';
+            el.addEventListener('click', function() {
+                navigator.clipboard.writeText(this.textContent);
+                const original = this.textContent;
+                this.textContent = '¡Copiado!';
+                this.style.color = 'var(--primary-color)';
+                setTimeout(() => {
+                    this.textContent = original;
+                    this.style.color = 'var(--text-secondary)';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
