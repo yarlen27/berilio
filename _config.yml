@@ -1,0 +1,30 @@
+# Configuración de Jekyll para Berilio
+title: Berilio
+description: Software de gestión ISO para empresas
+baseurl: "" 
+url: "https://berilio.co"
+
+# Construcción
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Excluir archivos
+exclude:
+  - README.md
+  - wordpress_update.py
+  - wordpress-credentials.txt
+  - .gitignore
+
+# Valores por defecto para posts
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Equipo Berilio"

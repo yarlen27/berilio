@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <img src="{{ '/berilio-logo.svg' | relative_url }}" alt="Be" class="logo-symbol">
+                    <span class="logo-suffix">rilio</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="{{ '/' | relative_url }}" class="nav-link">Inicio</a>
+                <a href="{{ '/features.html' | relative_url }}" class="nav-link">Características</a>
+                <a href="{{ '/blog' | relative_url }}" class="nav-link">Blog</a>
+                <a href="{{ '/#pricing' | relative_url }}" class="nav-link">Precios</a>
+                <a href="#contacto" class="nav-btn">Contactar</a>
+            </div>
+        </div>
+    </nav>
+
+    <main style="margin-top: 73px;">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="{{ '/berilio-logo.svg' | relative_url }}" alt="Berilio" class="footer-logo">
+                <p class="footer-tagline">Software de gestión ISO para empresas que van en serio.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="{{ '/' | relative_url }}">Berilio</a></li>
+                        <li><a href="{{ '/#pricing' | relative_url }}">Precios</a></li>
+                        <li><a href="#">Documentación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Berilio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html>

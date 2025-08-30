@@ -1,0 +1,114 @@
+---
+layout: default
+title: Blog
+---
+
+<style>
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 0;
+    background: var(--beige);
+    border-radius: 12px;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.blog-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.post-card {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-color: var(--primary-color);
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.post-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.read-more:after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover .read-more:after {
+    transform: translateX(4px);
+}
+</style>
+
+<div class="blog-container">
+    <div class="blog-header">
+        <h1>Blog de Berilio</h1>
+        <p>Insights sobre gestión ISO, cumplimiento normativo y mejores prácticas empresariales</p>
+    </div>
+
+    <div class="posts-grid">
+        {% for post in site.posts %}
+        <a href="{{ post.url }}" class="post-card">
+            <div class="post-date">{{ post.date | date: "%d de %B, %Y" }}</div>
+            <h2 class="post-title">{{ post.title }}</h2>
+            <p class="post-excerpt">
+                {% if post.excerpt %}
+                    {{ post.excerpt | strip_html | truncate: 150 }}
+                {% else %}
+                    {{ post.content | strip_html | truncate: 150 }}
+                {% endif %}
+            </p>
+            <span class="read-more">Leer más</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
