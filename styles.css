@@ -42,6 +42,13 @@ body {
     background: var(--background);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* Navigation */
@@ -453,6 +460,26 @@ body {
     height: 80px;
     margin-bottom: 1.5rem;
     opacity: 0.9;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-symbol {
+    width: 32px;
+    height: 32px;
+    opacity: 0.9;
+}
+
+.footer-logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-left: -4px;
 }
 
 .footer-tagline {
