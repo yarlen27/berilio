@@ -1,0 +1,27 @@
+# WordPress credentials - NEVER commit these
+wordpress-credentials.txt
+wordpress_update.py
+
+# WordPress files
+wordpress-content.html
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Environment files
+.env
+.env.local
