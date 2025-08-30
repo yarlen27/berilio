@@ -3,6 +3,7 @@ title: Berilio
 description: Software de gestión ISO para empresas
 baseurl: "" 
 url: "https://berilio.co"
+locale: es
 
 # Construcción
 markdown: kramdown
@@ -16,9 +17,22 @@ plugins:
 # Excluir archivos
 exclude:
   - README.md
-  - wordpress_update.py
-  - wordpress-credentials.txt
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
   - .gitignore
+  - "*.sh"
+  - "*.py"
+  - "*.php"
+  - wordpress*
+  - deploy*
+  - analisis*.md
+  - estructura*.md
+  - mvp.md
+  - logo.svg
+  - berilio-logo-backup.svg
+  - wordpress-credentials.txt
 
 # Valores por defecto para posts
 defaults:

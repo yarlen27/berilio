@@ -98,7 +98,10 @@ title: Blog
     <div class="posts-grid">
         {% for post in site.posts %}
         <a href="{{ post.url }}" class="post-card">
-            <div class="post-date">{{ post.date | date: "%d de %B, %Y" }}</div>
+            <div class="post-date">
+                {% assign m = post.date | date: "%B" %}
+                {{ post.date | date: "%d de " }}{{ site.data.months.es[m] }}{{ post.date | date: ", %Y" }}
+            </div>
             <h2 class="post-title">{{ post.title }}</h2>
             <p class="post-excerpt">
                 {% if post.excerpt %}

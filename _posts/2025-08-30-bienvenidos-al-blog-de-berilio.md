@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bienvenidos al blog de Berilio"
-date: 2025-01-30
+date: 2025-08-30
 categories: [anuncios]
 excerpt: "Inauguramos nuestro blog para compartir insights sobre gestión ISO, cumplimiento normativo y mejores prácticas empresariales."
 ---

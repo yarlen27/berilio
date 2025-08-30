@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://0.0.0.0:4000/blog/bienvenidos-al-blog-de-berilio/</loc>
-<lastmod>2025-01-30T00:00:00-05:00</lastmod>
+<loc>https://berilio.co/blog/bienvenidos-al-blog-de-berilio/</loc>
+<lastmod>2025-08-30T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/blog/</loc>
+<loc>https://berilio.co/blog/</loc>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/features.html</loc>
+<loc>https://berilio.co/features.html</loc>
 <lastmod>2025-08-19T19:41:42-05:00</lastmod>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/</loc>
+<loc>https://berilio.co/</loc>
 <lastmod>2025-08-30T06:22:49-05:00</lastmod>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/style-guide.html</loc>
+<loc>https://berilio.co/style-guide.html</loc>
 <lastmod>2025-08-20T09:44:26-05:00</lastmod>
-</url>
-<url>
-<loc>http://0.0.0.0:4000/wordpress-content.html</loc>
-<lastmod>2025-08-29T19:05:09-05:00</lastmod>
 </url>
 </urlset>

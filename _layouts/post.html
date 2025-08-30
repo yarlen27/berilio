@@ -7,7 +7,8 @@ layout: default
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%d de %B, %Y" }}
+                {% assign m = page.date | date: "%B" %}
+                {{ page.date | date: "%d de " }}{{ site.data.months.es[m] }}{{ page.date | date: ", %Y" }}
             </time>
             {% if page.author %}
                 • Por {{ page.author }}
