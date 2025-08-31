@@ -1,4 +1,7 @@
+console.log('🚀 Berilio Script Cargado - Versión: ' + new Date().toISOString());
+
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('📋 DOM Listo - Iniciando scripts de Berilio');
     // Simple navbar scroll effect
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;

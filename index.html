@@ -24,7 +24,7 @@
                 <a href="#pricing" class="nav-link">Precios</a>
                 <a href="/blog" class="nav-link">Blog</a>
                 <a href="#empresa" class="nav-link">Empresa</a>
-                <a href="#contacto" class="nav-btn">Contactar</a>
+                <a href="#contacto" class="nav-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'}); return false;">Contactar</a>
             </div>
         </div>
     </nav>
@@ -151,7 +151,22 @@
         <div class="cta-container">
             <h2>¿Necesitas más de 100 usuarios?</h2>
             <p>Tenemos planes personalizados para empresas grandes. Cotización según tus necesidades específicas.</p>
-            <button class="btn-cta">Contactar ventas</button>
+            <button class="btn-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'});">Contactar ventas</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>¿Listo para simplificar tu gestión ISO?</h2>
+                <p>Completa el formulario y nos pondremos en contacto en menos de 24 horas</p>
+            </div>
+            <div class="contact-form-wrapper">
+                <!-- HubSpot Form Embed -->
+                <script src="https://js.hsforms.net/forms/embed/50428382.js" defer></script>
+                <div class="hs-form-frame" data-region="na1" data-form-id="b1543c32-c37f-452e-bd55-6c6ef7b866fb" data-portal-id="50428382"></div>
+            </div>
         </div>
     </section>
 
@@ -176,7 +191,7 @@
                     <ul>
                         <li><a href="#">Sobre nosotros</a></li>
                         <li><a href="/blog">Blog</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
             </div>
